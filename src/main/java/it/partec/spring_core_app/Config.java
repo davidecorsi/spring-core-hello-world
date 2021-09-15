@@ -1,20 +1,9 @@
 package it.partec.spring_core_app;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan("it.partec.spring_core_app")
 public class Config {
-	
-	@Bean
-	public Message message() {
-		return new Message();
-	}
-	
-	@Bean
-	public HelloWorld helloWorld() {
-		HelloWorld helloWorld = new HelloWorld();
-		helloWorld.setMessage(message());
-		return helloWorld;
-	}
 }
